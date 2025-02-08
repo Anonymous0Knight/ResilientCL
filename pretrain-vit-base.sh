@@ -1,0 +1,14 @@
+torchrun --nproc_per_node=2 main_pretrain.py \
+    --model mae_vit_base_patch16 \
+    --accum_iter 2 \
+    --batch_size 512 \
+    --blr 1.5e-4 \
+    --mask_ratio 0.25 \
+    --epochs 800 \
+    --moco-m-cos --moco-t=.2 --moco-dim=1024 \
+    --warmup_epochs 40 \
+    --weight_decay 0.05 \
+    --num_workers 8 \
+    --dataset imagenet-lt \
+    --output_dir ./pretrain_vit_base_dir \
+    --log_dir ./pretrain_vit_base_dir \
