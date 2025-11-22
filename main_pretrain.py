@@ -32,7 +32,7 @@ import util.misc as misc
 from util.misc import NativeScalerWithGradNormCount as NativeScaler
 
 import models_moco
-import models_mae
+import models_rescl
 
 from engine_pretrain import train_one_epoch
 from dataset import ImagenetLTDataset,iNat18Dataset, GaussianBlur, Solarize, TwoCropsTransform
@@ -209,7 +209,7 @@ def main(args):
     
     # define the model
     model = models_moco.MoCo_ViT(
-        models_mae.__dict__[args.model],
+        models_rescl.__dict__[args.model],
         args.moco_dim, args.moco_mlp_dim, args.moco_t)
     
     model.to(device)
