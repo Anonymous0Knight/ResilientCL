@@ -68,7 +68,7 @@ we compare mainstream contrastive pre-training methods, with the baseline of ViT
 Besides, to validate the generalization capability of RCP under drifting scenarios, we conducted experiments from the perspectives of domain shift and out-of-distribution (OOD) detection.
 
 
-![gen-OOD-results](./images/gen-OOD-results.png)
+![gen-OOD-results](./images/gen-ood-results.png)
 
  Following that, the feature embedding space of pre-trained models is intuitively visualized with degrees, illustrating how RCP mitigates the concept drift within the feature space.
 
